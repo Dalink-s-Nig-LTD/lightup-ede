@@ -11,13 +11,13 @@ const FormsSection = () => {
     },
     {
       title: "Converts Form 2",
-      description: "Capture follow-up information and spiritual growth progress of converts.",
+      description: "Record new convert details including name, contact, and decision date.",
       link: "#google-form-2",
       icon: <Heart className="h-6 w-6" />,
     },
     {
       title: "Prayer Request",
-      description: "Share your prayer requests with us. We believe in the power of prayer.",
+      description: "Record new convert details including name, contact, and decision date.",
       link: "#google-form-3",
       icon: <BookOpen className="h-6 w-6" />,
     },
