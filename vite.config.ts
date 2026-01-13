@@ -10,11 +10,13 @@ export default defineConfig(({ mode }) => ({
         port: 8080,
         proxy: {
             "/api": {
-                target: "http://72.62.112.147",
+                target: "https://37d513fd96de.ngrok-free.app",
                 changeOrigin: true,
+                secure: false,
                 rewrite: (path) => path.replace(/^\/api/, ""),
             },
         },
+
     },
     plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
     resolve: {
