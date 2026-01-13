@@ -10,11 +10,22 @@ const Convert = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const submitForm = async (formData: FormData): Promise<void> => {
-        // Simulate API call delay
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        const data = new URLSearchParams();
+        formData.forEach((value, key) => {
+            data.append(key, value.toString());
+        });
 
-        // Simulate randomization of success/failure if needed, but for now just success
-        console.log("Form Data Submitted:", Object.fromEntries(formData));
+        const response = await fetch("/api/convert/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: data,
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
     };
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
