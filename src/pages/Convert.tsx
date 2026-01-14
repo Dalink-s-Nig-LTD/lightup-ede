@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import RccgLogo from "../assets/logo.png";
-import PastoreAdeboyeImg from "../assets/pastor-adeboye.webp";
+import PastoreAdeboyeImg from "../assets/RCCG-Auditorium.jpg";
 import { toast } from "sonner";
 import { FormEvent, useState } from "react";
 
